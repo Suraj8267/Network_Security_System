@@ -1,3 +1,4 @@
+## This is my ETL(Extract Transform Load) Piepline
 import os
 import sys
 import json
@@ -40,7 +41,7 @@ class NetworkDataExctract:
             self.collection =collection
             self.records = records
 
-            self.mongo_client = pymongo.MongoClient(MONGO_DB_URL)  ## here we are creating a mongo Client and pymongo is a library to connect with mongoDB database from python and MongoClient() : Ye MongoDB server se connection establish karne ke liye client object banata hai.
+            self.mongo_client = pymongo.MongoClient(MONGO_DB_URL)  ## Ye MongoDB server se connection establish karne ke liye client object banata hai. ## here we are creating a mongo Client and pymongo is a library to connect with mongoDB database from python and MongoClient() : Ye MongoDB server se connection establish karne ke liye client object banata hai.
             self.database = self.mongo_client[self.database]  ## MongoDB client se my_database database ko access karo if self.database or mongoDB database ka naam my_database hai and phle self.database me string thi abb database object hai 
 
             self.collection = self.database[self.collection]
